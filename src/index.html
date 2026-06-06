@@ -4,22 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Is this movie safe?</title>
+    <link rel="icon" type="image/png" href="/images/favicon/favicon.png" />
     <link rel="stylesheet" href="/css/style.css" />
     <script type="module" src="/js/main.js"></script>
   </head>
-  <body>
-    <header>
-      <h1>Is this movie safe?</h1>
-    </header>
-    <main>
-      <div class="search-container">
-        <input type="text" id="movieSearch" placeholder="Search a movie..." required />
-        <button id="searchBtn">Search</button>
-      </div>
-      <section id="results-container"></section>
+  <body class="home-body">
+    <main class="home-main">
+      <section class="home-content">
+        <h1>Is this<br>movie<br>safe?</h1>
+        <p>Find if this movie you're going to see if is<br><strong>SAFE ENOUGH</strong></p>
+        <form id="searchForm" class="search-form">
+          <input type="text" id="movieSearch" placeholder="Search movie" required />
+          <button type="submit" id="searchBtn">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </form>
+        <div id="searchResults" class="search-results"></div>
+      </section>
+      <section class="home-image">
+        <img src="/images/hero-image.png" alt="Safe or not safe rating arrows" class="hero-img" />
+      </section>
     </main>
-    <footer>
-      <p>&copy; 2026 Ezequiel Jimenez | WDD 330 Final Project</p>
-    </footer>
   </body>
 </html>
