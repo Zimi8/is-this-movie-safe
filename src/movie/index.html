@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Details - Is this movie safe?</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script type="module" src="/js/main.js"></script>
+  </head>
+  <body class="movie-body">
+    <header>
+      <a href="/" class="back-link">← Back to Search</a>
+    </header>
+    <main id="movieDashboard">
+      <h1 id="movieTitle" class="movie-title">Loading...</h1>
+      <div class="dashboard-grid">
+        <div class="rating-info">
+          <div class="rating-box">
+            <h2>Motion Picture Rating (MPA)</h2>
+            <p id="generalRating">Loading rating details...</p>
+            <hr>
+            <ul class="severity-list">
+              </ul>
+          </div>
+          <button id="showDetailsBtn" class="details-btn">DETAILS & LITERAL DESCRIPTION</button>
+        </div>
+        <div class="poster-container">
+          <img id="moviePoster" src="https://via.placeholder.com/300x450?text=Loading..." alt="Movie Poster" />
+        </div>
+      </div>
+
+      <div id="spoilerModal" class="modal">
+        <div class="modal-content">
+          <div class="spoiler-box">SPOILERS AHEAD</div>
+          <button id="acceptSpoilers" class="accept-btn">But is for your safety</button>
+        </div>
+      </div>
+
+      <section id="literalDetails" class="literal-details hidden">
+        <div class="detail-column">
+          <h3>Violence</h3>
+          <p id="violenceDetails">Loading...</p>
+        </div>
+        <div class="detail-column">
+          <h3>Drugs reference</h3>
+          <p id="drugsDetails">Loading...</p>
+        </div>
+        <div class="detail-column">
+          <h3>Adult content</h3>
+          <p id="adultDetails">Loading...</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

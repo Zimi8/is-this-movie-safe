@@ -23,12 +23,14 @@ export default class MovieSearch {
     }
   }
 //Using placeholders, for the moment! ! 
-  renderResults(movies) {
+renderResults(movies) {
     const html = movies.map(movie => {
-      const posterSrc = movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x450?text=No+Poster";
+      const fallbackImg = "https://via.placeholder.com/300x450?text=No+Poster";
+      const posterSrc = movie.Poster !== "N/A" ? movie.Poster : fallbackImg;
+      
       return `
         <div class="movie-card">
-          <img src="${posterSrc}" alt="${movie.Title} poster">
+          <img src="${posterSrc}" alt="${movie.Title} poster" onerror="this.onerror=null; this.src='${fallbackImg}';">
           <h3>${movie.Title}</h3>
           <p>${movie.Year}</p>
           <a href="/movie/index.html?id=${movie.imdbID}" class="details-link">Check Safety</a>
